@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleção de Produtos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="div-produtos">
+    <h2>Seleção de Produtos</h2>
+    <form id="productForm">
+      <div>
+        <label for="productCode">Código do Produto:</label>
+        <input type="number" id="productCode" name="productCode">
+      </div>
+      <div>
+        <label for="quantity">Quantidade:</label>
+        <input type="number" id="quantity" name="quantity">
+      </div>
+      <button type="button" onclick="addItem()">Adicionar Item</button>
+      <button type="button" id="btn-continuar" onclick="continueForCliente()" style="display: none;">Continuar</button>
+    </form>
+  </div>
+
+  <div class="container" id="div-cliente" style="display: none;">
+    <h2>Dados do Cliente</h2>
+    <form id="clientForm">
+      <div>
+        <label for="cpf">CPF (opcional):</label>
+        <input type="text" id="cpf" name="cpf">
+      </div>
+      <div>
+        <label for="paymentMethod">Forma de Pagamento:</label>
+        <select id="paymentMethod" name="paymentMethod">
+          <option value="">Selecione uma opção</option>
+          <option value="credito">Cartão de Crédito</option>
+          <option value="debito">Cartão de Débito</option>
+          <option value="dinheiro">Dinheiro</option>
+          <option value="pix">Pix</option>
+        </select>
+      </div>
+      <div>
+        <strong>Valor total: R$<span id="totalSpan"></span></strong>
+      </div>
+      <div id="cashPayment" style="display: none;">
+        <label for="valorPago">Valor Pago:</label>
+        <input type="number" id="valorPago" name="valorPago">
+      </div>
+      <button type="button" onclick="continueForNotaF()">Continuar</button>
+    </form>
+  </div>
+
+  <div class="container whiteContainer" id="div-notaF" style="display: none;">
+    <h2>Nota Fiscal</h2>
+    <p><strong>CPF:</strong> <span id="cpfNotaFiscal"></span></p>
+    <div id="invoiceDetails"></div>
+    <p><strong>Método de pagamento:</strong> <span id="MPNotaFiscal"></span> </p>
+    <p><strong>Valor Total:</strong> R$ <span id="valorTotal"></span></p>
+    <p><strong>Troco:</strong> R$ <span id="troco"></span></p>
+    <button onclick="window.print()">Imprimir Nota Fiscal</button>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

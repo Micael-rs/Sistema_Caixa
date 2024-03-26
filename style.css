@@ -1,0 +1,70 @@
+/* Estilos gerais */
+body {
+  font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important;
+  color: white;
+  margin: 0;
+  padding: 75px;
+  background-color: #000000;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 50px;
+  background-color: #2f2f2f;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.whiteContainer{
+  background-color: #ffffff;
+  color: black;
+}
+
+h2 {
+  margin-top: 0;
+  position: relative;
+  animation: moveLeft 2s ease-in-out forwards;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+/* Estilos para inputs e labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  
+  
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+  width: calc(100% - 22px); /* Considerando o padding */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #1f39ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 35px;
+}
+
+button:hover {
+  background-color: #0a0064;
+}
+
+/* Estilo para o campo do número do cartão */
+#cardNumberInput {
+  display: none;
+}
